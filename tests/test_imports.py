@@ -2,6 +2,8 @@
 Does `admonitions` import without fail?
 """
 
+import pytest
+
 
 def test_imports():
     """
