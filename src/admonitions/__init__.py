@@ -61,6 +61,7 @@ class Admonition:
     ) -> Iterable[Segment]:
         """Render the message as a rich string."""
         from rich.segment import Segment
+        from rich.text import Text
 
         yield from self.render(
             content=Text(self.header, style=self.style, end="")
@@ -87,6 +88,7 @@ class Admonition:
     ) -> Measurement:
         """Measure the message."""
         from math import floor
+        from rich.measure import Measurement
 
         return Measurement(
             floor(len(self.header) * 1.25) if self.header else 8, options.max_width
@@ -166,6 +168,7 @@ class Admonition:
     ) -> Iterable[Segment]:
         """Render the message as a rich string."""
         from rich.text import Text
+        from rich.padding import Padding
 
         _style = console.get_style(style)
         _options = options if options else console.options
