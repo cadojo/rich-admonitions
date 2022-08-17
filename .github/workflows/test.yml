@@ -36,4 +36,4 @@ jobs:
       run: pip install --upgrade hatch
 
     - name: Run tests
-      run: hatch run cov
+      run: python -m hatch run cov

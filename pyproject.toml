@@ -38,7 +38,7 @@ Issues = "https://github.com/unknown/rich-admonitions/issues"
 Source = "https://github.com/unknown/rich-admonitions"
 
 [tool.hatch.version]
-path = "src/admonitions/__metadata__.py"
+path = "admonitions/__metadata__.py"
 
 [tool.hatch.build.targets.sdist]
 [tool.hatch.build.targets.wheel]
@@ -49,7 +49,7 @@ dependencies = [
   "pytest-cov",
 ]
 [tool.hatch.envs.default.scripts]
-cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/admonitions --cov=tests"
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=admonitions --cov=tests"
 no-cov = "cov --no-cov"
 
 [[tool.hatch.envs.test.matrix]]
@@ -59,7 +59,7 @@ python = ["37", "38", "39", "310"]
 branch = true
 parallel = true
 omit = [
-  "src/admonitions/__metadata__.py",
+  "admonitions/__metadata__.py",
 ]
 
 [tool.coverage.report]
