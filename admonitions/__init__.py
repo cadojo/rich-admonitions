@@ -26,7 +26,7 @@ from rich.padding import Padding
 from rich.console import Console, ConsoleOptions, Measurement, RenderableType
 
 
-@dataclass(slots=True)
+@dataclass
 class Admonition:
     """
     A rich-text formatted admonition, with built-in themes!
